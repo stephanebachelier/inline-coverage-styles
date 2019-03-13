@@ -13,12 +13,24 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "lint": "standard src/* test/* | snazzy"
+    "lint": "standard src/* test/* | snazzy",
+    "test": "jest --config .jest.unit.js",
+    "test:ci": "jest --config .jest.unit.ci.js --no-color"
   },
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
       "**/node_modules/**"
+    ],
+    "global": [
+      "jest",
+      "afterAll",
+      "afterEach",
+      "beforeAll",
+      "beforeEach",
+      "describe",
+      "test",
+      "expect"
     ]
   },
   "devDependencies": {
@@ -26,6 +38,9 @@
     "@commitlint/config-conventional": "^7.5.0",
     "babel-eslint": "^10.0.1",
     "husky": "^1.3.1",
+    "jest": "^24.4.0",
+    "jest-chain": "^1.1.2",
+    "jest-extended": "^0.11.1",
     "jsonlint": "^1.6.3",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
