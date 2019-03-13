@@ -1,4 +1,4 @@
-const helper = require('helper/minify')
+const helper = require('lib/helper/minify')
 const mockCleanCSS = require('clean-css')
 
 jest.mock('clean-css')

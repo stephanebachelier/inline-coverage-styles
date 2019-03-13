@@ -1,4 +1,4 @@
-const helper = require('helper/tmp')
+const helper = require('lib/helper/tmp')
 
 test('should remove if existing prior to creating tmp folder', async () => {
   const name = helper.getTmpDir()
