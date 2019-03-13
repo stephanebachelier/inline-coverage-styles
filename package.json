@@ -41,6 +41,8 @@
     "jest": "^24.4.0",
     "jest-chain": "^1.1.2",
     "jest-extended": "^0.11.1",
+    "jest-junit": "^6.3.0",
+    "jest-silent-reporter": "^0.1.2",
     "jsonlint": "^1.6.3",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
