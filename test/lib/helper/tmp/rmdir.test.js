@@ -1,5 +1,5 @@
 jest.mock('fs-extra')
-const helper = require('helper/tmp')
+const helper = require('lib/helper/tmp')
 const fse = require('fs-extra')
 
 test('should export fs-extra `remove` method', () => {
