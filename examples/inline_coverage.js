@@ -1,4 +1,6 @@
 const inlineCoverageStyles = require('..')
 const path = require('path')
 
-inlineCoverageStyles(path.resolve('coverage'))
+inlineCoverageStyles({
+  baseDir: path.resolve('coverage')
+})
