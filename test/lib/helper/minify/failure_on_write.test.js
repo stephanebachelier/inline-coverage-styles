@@ -1,9 +1,9 @@
-const helper = require('helper/minify')
+const helper = require('lib/helper/minify')
 const fs = require('fs-extra')
 
 jest.mock('fs-extra')
 
-test('should use non minified css if minification fails', async () => {
+test('should throw if fail to write minified file to disk', async () => {
   const css = 'body { color: #000000; }'
   const minCss = 'body{color:#000;}'
 
@@ -11,16 +11,22 @@ test('should use non minified css if minification fails', async () => {
   const fout = '/tmp/foo/bar.css'
 
   fs.readFile.mockResolvedValue(css)
+  fs.writeFile.mockRejectedValue('Boom')
 
   helper.minify = jest.fn().mockResolvedValue({
-    errors: ['foo'],
+    errors: [],
     styles: minCss
   })
 
-  await helper(fin, fout)
+  // use try/catch as await expect(fun call).rejects.toThrow does not work here
+  try {
+    await helper(fin, fout)
+  } catch (e) {
+    expect(e).toEqual('Boom')
+  }
 
   expect(fs.readFile).toHaveBeenCalledWith(fin)
   expect(helper.minify).toHaveBeenCalledTimes(1)
   expect(helper.minify).toHaveBeenCalledWith(css)
-  expect(fs.writeFile).toHaveBeenCalledWith(fout, css)
+  expect(fs.writeFile).toHaveBeenCalledWith(fout, minCss)
 })

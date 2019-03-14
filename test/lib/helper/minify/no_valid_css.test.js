@@ -1,4 +1,4 @@
-const helper = require('helper/minify')
+const helper = require('lib/helper/minify')
 const fs = require('fs-extra')
 
 jest.mock('fs-extra')

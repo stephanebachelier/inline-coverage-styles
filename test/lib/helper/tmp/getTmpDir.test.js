@@ -1,4 +1,4 @@
-const { getTmpDir } = require('helper/tmp')
+const { getTmpDir } = require('lib/helper/tmp')
 const os = require('os')
 const path = require('path')
 

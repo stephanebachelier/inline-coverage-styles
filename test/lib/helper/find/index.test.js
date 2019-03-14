@@ -1,5 +1,5 @@
 jest.mock('glob')
-const helper = require('helper/find')
+const helper = require('lib/helper/find')
 const glob = require('glob')
 
 test('should throw error if glob failed', async () => {
