@@ -7,7 +7,8 @@ module.exports = Object.assign({}, require('./.jest.config'), {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
-    'helper/**/*.js'
+    'index.js',
+    'lib/**/*.js'
   ],
-  coverageReporters: ['html', 'cobertura']
+  coverageReporters: ['html', 'lcov', 'cobertura']
 })
