@@ -1,3 +1,11 @@
+## [0.1.1](https://github.com/stephanebachelier/inline-coverage-styles/compare/0.1.0...0.1.1) (2019-03-14)
+
+
+
+## [0.1.1](https://github.com/stephanebachelier/inline-coverage-styles/compare/0.1.0...0.1.1) (2019-03-14)
+
+
+
 # 0.1.0 (2019-03-14)
 
 
