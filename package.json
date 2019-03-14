@@ -1,7 +1,7 @@
 {
   "name": "inline-coverage-styles",
   "description": "Inline CSS for code coverage report",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "author": "stephane.bachelier@gmail.com",
   "license": "MIT",
