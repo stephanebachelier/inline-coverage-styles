@@ -1,0 +1,17 @@
+{
+  "increment": "conventional:angular",
+  "scripts": {
+    "changelog": "yarn run changelog",
+    "beforeStage": "yarn run changelog && git add CHANGELOG.md"
+  },
+  "git": {
+    "addUntrackedFiles": false,
+    "commitMessage": "chore: release %s",
+    "commitArgs": "-S --no-verify",
+    "tagArgs": "-s",
+    "commitMessage": "chore: release ${version}"
+  },
+  "github": {
+    "release": true
+  }
+}
